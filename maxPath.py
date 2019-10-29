@@ -3,8 +3,7 @@ strings = string.replace('[','').split('],')
 lists = [map(int, s.replace(']','').split(',')) for s in strings]
 
 def maxPath(lists, index=-1):
-    if index == - len(lists):
-        return lists[0][0]
+    
     for i in range(len(lists[index]) - 1):
         maxSum = max(lists[index][i], lists[index][i+1])
         lists[index- 1][i] += maxSum
